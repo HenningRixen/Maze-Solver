@@ -59,6 +59,7 @@ class Cell:
             self._win.draw_line(line, fill_color)
             line = Line(Point(to_cell._x1, to_y_middle), Point(to_x_middle, to_y_middle))
             self._win.draw_line(line, fill_color)           
+        
         #move up
         elif self._y1 > to_cell._y1:
             line = Line( Point(_x_middle, _y_middle), Point(_x_middle, self._y1),)
