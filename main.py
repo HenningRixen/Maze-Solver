@@ -16,6 +16,8 @@ def main():
 
     maze = Maze(margin, margin, num_rows, num_cols, cell_size_x, cell_size_y, win, 10)
 
+    maze.solve()
+
 
     
     
