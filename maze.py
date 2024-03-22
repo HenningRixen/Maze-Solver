@@ -62,16 +62,16 @@ class Maze:
             need_visit = []
             # left
             if i > 0 and not self._cells[i - 1][j].visited:
-                need_visit.append((i - 1), j)
+                need_visit.append((i - 1, j))
             #right
-            if i > 0 and not self._cells[i + 1][j].visited:
-                need_visit.append((i + 1), j)
+            if i < self._num_cols - 1 and not self._cells[i + 1][j].visited:
+                need_visit.append((i + 1, j))
             #up
             if j > 0 and not self._cells[i][j - 1].visited:
-                need_visit.append(i, (j - 1))
+                need_visit.append((i, j - 1))
             #down
-            if j > 0 and not self._cells[i][j + 1].visited:
-                need_visit.append(i, (j + 1))
+            if j < self._num_rows - 1 and not self._cells[i][j + 1].visited:
+                need_visit.append((i, j + 1))
             
             if len(need_visit) == 0:
                 self._draw_cell(i, j)
